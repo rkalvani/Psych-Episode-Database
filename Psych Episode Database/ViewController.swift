@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let URLString = "http://api.tvmaze.com/shows/517/episodes"
         //if statement check to see if URL is valid
         if let url = NSURL(string: URLString)
@@ -42,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let picture = result["original"].stringValue
                 
                 //creates a dictionary with keys and values
-                let object = ["name" : name, "season": season, "number": number, "summary" : summary]
+                let object = ["name" : name, "season": season, "number": number, "summary" : summary, "image" : picture]
                 // places it in array
                 episodes.append(object)
            }
@@ -61,6 +62,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return episodes.count
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if let indexPath = myTableView.indexPathForSelectedRow
+        {
+            let episode = episodes[indexPath.row]
+            let nextController = segue.destinationViewController as! detailViewController
+            
+            nextController.detailImage = episode["image"]!
+        }
+
+    }
 
 }
 
