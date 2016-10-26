@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
         //reads the results array from api
         func parse(json: JSON) {
-            for result in json[""].arrayValue {
+            for result in json[].arrayValue {
                 //grabbing values from keys
                 let name = result["name"].stringValue
                 let season = result["season"].stringValue
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let object = ["name" : name, "season": season, "number": number, "summary" : summary]
                 // places it in array
                 episodes.append(object)
-            }
+           }
             myTableView.reloadData()
         }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
