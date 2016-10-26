@@ -14,6 +14,8 @@
 		3F3646BC1DBE58DA0003A71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3646BA1DBE58DA0003A71B /* LaunchScreen.storyboard */; };
 		3F3646C71DBE58DA0003A71B /* Psych_Episode_DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3646C61DBE58DA0003A71B /* Psych_Episode_DatabaseTests.swift */; };
 		3F3646D21DBE58DA0003A71B /* Psych_Episode_DatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3646D11DBE58DA0003A71B /* Psych_Episode_DatabaseUITests.swift */; };
+		3F97A6631DBFA07A00689420 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97A6621DBFA07A00689420 /* SwiftyJSON.swift */; };
+		3F97A6651DBFA22A00689420 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97A6641DBFA22A00689420 /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3F3646CD1DBE58DA0003A71B /* Psych Episode DatabaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Psych Episode DatabaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3646D11DBE58DA0003A71B /* Psych_Episode_DatabaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Psych_Episode_DatabaseUITests.swift; sourceTree = "<group>"; };
 		3F3646D31DBE58DA0003A71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F97A6621DBFA07A00689420 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		3F97A6641DBFA22A00689420 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = detailViewController.swift; path = ../detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				3F3646B11DBE58DA0003A71B /* AppDelegate.swift */,
 				3F3646B31DBE58DA0003A71B /* ViewController.swift */,
+				3F97A6641DBFA22A00689420 /* detailViewController.swift */,
+				3F97A6621DBFA07A00689420 /* SwiftyJSON.swift */,
 				3F3646B51DBE58DA0003A71B /* Main.storyboard */,
 				3F3646B81DBE58DA0003A71B /* Assets.xcassets */,
 				3F3646BA1DBE58DA0003A71B /* LaunchScreen.storyboard */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F97A6631DBFA07A00689420 /* SwiftyJSON.swift in Sources */,
 				3F3646B41DBE58DA0003A71B /* ViewController.swift in Sources */,
 				3F3646B21DBE58DA0003A71B /* AppDelegate.swift in Sources */,
+				3F97A6651DBFA22A00689420 /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +495,7 @@
 				3F3646D81DBE58DA0003A71B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F3646D91DBE58DA0003A71B /* Build configuration list for PBXNativeTarget "Psych Episode DatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +504,7 @@
 				3F3646DB1DBE58DA0003A71B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F3646DC1DBE58DA0003A71B /* Build configuration list for PBXNativeTarget "Psych Episode DatabaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +513,7 @@
 				3F3646DE1DBE58DA0003A71B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
