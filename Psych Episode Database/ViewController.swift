@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let season = result["season"].stringValue
                 let number = result["number"].stringValue
                 let summary = result["summary"].stringValue
-                let picture = result["original"].stringValue
+                let picture = result["image"]["original"].stringValue
                 
                 //creates a dictionary with keys and values
                 let object = ["name" : name, "season": season, "number": number, "summary" : summary, "image" : picture]
