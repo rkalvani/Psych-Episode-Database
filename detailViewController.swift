@@ -8,24 +8,26 @@
 
 import UIKit
 
+
 class detailViewController: UIViewController
 {
-
+    
     @IBOutlet weak var episodeImage: UIImageView!
-
+    @IBOutlet weak var episodeSummary: UITextView!
     var detailImage : String!
+    var detailSummary : String!
     
     enum ErrorHandling:ErrorType
     {
         case NetworkError
     }
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-       load_image(detailImage)
-        
+        load_image(detailImage)
+        episodeSummary.text = detailSummary!
     }
 
     func load_image(urlString:String)

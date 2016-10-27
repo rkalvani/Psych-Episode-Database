@@ -70,6 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let nextController = segue.destinationViewController as! detailViewController
             
             nextController.detailImage = episode["image"]!
+            nextController.detailSummary = episode["summary"]!
         }
 
     }

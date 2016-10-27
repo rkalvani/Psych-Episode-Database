@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZH-7D-YLz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZH-7D-YLz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -88,17 +88,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7sm-PQ-xUX">
                                 <rect key="frame" x="48" y="91" width="505" height="226"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LO4-oy-h9l">
+                                <rect key="frame" x="48" y="342" width="505" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Lof-q9-V4U" firstAttribute="top" secondItem="LO4-oy-h9l" secondAttribute="bottom" constant="43" id="8fb-DA-Y95"/>
+                            <constraint firstItem="LO4-oy-h9l" firstAttribute="top" secondItem="7sm-PQ-xUX" secondAttribute="bottom" constant="25" id="AfP-Ux-nFq"/>
+                            <constraint firstItem="LO4-oy-h9l" firstAttribute="leading" secondItem="EW1-zW-lgL" secondAttribute="leadingMargin" constant="28" id="C5P-Bw-O6d"/>
                             <constraint firstItem="Lof-q9-V4U" firstAttribute="top" secondItem="7sm-PQ-xUX" secondAttribute="bottom" constant="283" id="GBz-gC-pD4"/>
                             <constraint firstItem="7sm-PQ-xUX" firstAttribute="top" secondItem="1bV-x7-GW0" secondAttribute="bottom" constant="27" id="PRE-RT-XnE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7sm-PQ-xUX" secondAttribute="trailing" constant="27" id="SAH-Of-hH3"/>
                             <constraint firstItem="7sm-PQ-xUX" firstAttribute="leading" secondItem="EW1-zW-lgL" secondAttribute="leadingMargin" constant="28" id="lJO-JM-x1i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LO4-oy-h9l" secondAttribute="trailing" constant="27" id="yWY-gR-xyH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="episodeImage" destination="7sm-PQ-xUX" id="8hb-GF-dG1"/>
+                        <outlet property="episodeSummary" destination="LO4-oy-h9l" id="xvR-fg-DKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuF-xn-2R4" userLabel="First Responder" sceneMemberID="firstResponder"/>
