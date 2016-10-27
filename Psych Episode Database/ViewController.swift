@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
-    
+    //sets the title and info text in the cell
         let episode = episodes[indexPath.row]
         cell.textLabel?.text = episode["name"]
         cell.detailTextLabel?.text = "Season: \(episode["season"]!)  Episode:\(episode["number"]!)"
@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return episodes.count
+        return episodes.count //makes cells for the number of episodes
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
