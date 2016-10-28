@@ -27,9 +27,11 @@ class detailViewController: UIViewController
     {
         super.viewDidLoad()
         load_image(detailImage)
+        // adds summary to view.
         episodeSummary.text = detailSummary!
     }
 
+    // function to load image from the inputed URL.
     func load_image(urlString:String)
     {
         let imgURL: NSURL = NSURL(string: urlString)!
