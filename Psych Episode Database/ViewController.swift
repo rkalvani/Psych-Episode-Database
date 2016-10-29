@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //initializing empty array of dictionaries
     var episodes = [[String: String]]()
+    var epNameArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +47,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let object = ["name" : name, "season": season, "number": number, "summary" : summary, "image" : picture]
                 // places it in array
                 episodes.append(object)
+                epNameArray.append(name)
+                
            }
             myTableView.reloadData()
         }
+    
+    func randomEpisode()
+    {
+        //let randomIndex = String(arc4random_uniform(120)+46536)
+        //let randomIndex = Int(arc4random_uniform(UInt32(episodes.count)))
+        let randomIndex = Int(arc4random_uniform(UInt32(epNameArray.count)))
+        
+       print(epNameArray[randomIndex])
+        
+        let myAlert = UIAlertController(title: epNameArray[randomIndex], message: nil, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "You know that's right!", style: UIAlertActionStyle.Cancel, handler: nil)
+        myAlert.addAction(cancelAction)
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
     
@@ -62,6 +80,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return episodes.count
     }
 
+    
+    @IBAction func RandomEpisodeButtonPressed(sender: UIBarButtonItem)
+    {
+        randomEpisode()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if let indexPath = myTableView.indexPathForSelectedRow
