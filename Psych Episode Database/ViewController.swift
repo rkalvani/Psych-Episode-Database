@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //initializing empty array of dictionaries
     var episodes = [[String: String]]()
+    //initializing empty array.
     var epNameArray = [String]()
     
     override func viewDidLoad() {
@@ -47,6 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let object = ["name" : name, "season": season, "number": number, "summary" : summary, "image" : picture]
                 // places it in array
                 episodes.append(object)
+                // places names in array
                 epNameArray.append(name)
                 
            }
@@ -55,12 +57,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func randomEpisode()
     {
-        //let randomIndex = String(arc4random_uniform(120)+46536)
-        //let randomIndex = Int(arc4random_uniform(UInt32(episodes.count)))
+        // creates random number from the number of episode names there are.
         let randomIndex = Int(arc4random_uniform(UInt32(epNameArray.count)))
         
        print(epNameArray[randomIndex])
-        
+        // creates alert that shows episode name.
         let myAlert = UIAlertController(title: epNameArray[randomIndex], message: nil, preferredStyle: .Alert)
         let cancelAction = UIAlertAction(title: "You know that's right!", style: UIAlertActionStyle.Cancel, handler: nil)
         myAlert.addAction(cancelAction)
@@ -86,6 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         randomEpisode()
     }
     
+    // segue of image and summary to detail view controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if let indexPath = myTableView.indexPathForSelectedRow
